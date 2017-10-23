@@ -197,7 +197,7 @@ tests.test_train_nn(train_nn)
 
 def run():
     num_epochs = 50
-    batch_size = 10
+    batch_size = 5
     ## Note. batch size 10 is too big for g3.4xlarge, use g3.8xlarge instead
     num_classes = 2
     image_shape = (160, 576)
