@@ -186,12 +186,12 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
                 input_image: X,
                 correct_label: y,
                 keep_prob: 0.5,
-                learning_rate: 0.001
+                learning_rate: 0.0005
             }
             ## I modified keep probability from 0.3 to 0.5 as I observed a high bias problem in training
             ## It is possible I need also to set a smaller learning rate, such as 0.0005.
             _, loss = sess.run([train_op, cross_entropy_loss], feed_dict = feed_dict)
-            if batch_num % 5 == 0:
+            if batch_num % 10 == 0:
                 print("Epoch: {} | Batch: {} | Loss: {}".format(epoch, batch_num, loss))
 tests.test_train_nn(train_nn)
 
