@@ -194,7 +194,7 @@ def train_nn1(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_
             if batch_num % 5 == 0:
                 print("Epoch: {} | Batch: {} | Loss: {}".format(epoch, batch_num, loss))
 
-def train_nn1(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_loss, input_image,
+def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_loss, input_image,
              correct_label, keep_prob, learning_rate):
     """
     Train neural network and print out the loss during training.
