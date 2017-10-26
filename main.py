@@ -69,7 +69,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     l2 = tf.contrib.layers.l2_regularizer(1e-3)
     # 1x1 convolution from vgg_layer7_out
     layer7_fcn = tf.layers.conv2d(vgg_layer7_out,
-                                  32*num_classes,
+                                  64,
                                   kernel_size=(1,1),
                                   strides=(1,1),
                                   padding='same',
@@ -77,7 +77,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
                                   kernel_regularizer=l2)
     # followed with upsampling
     layer7_upsample = tf.layers.conv2d_transpose(layer7_fcn,
-                                                 4*num_classes,
+                                                 64,
                                                  kernel_size=(4,4),
                                                  strides=(2,2),
                                                  padding='same',
@@ -86,7 +86,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     # 1-by-1 convolution from vgg_layer4_out. The output will be acted as a  
     # skip layer and connect with layer7_upsample
     layer4_fcn = tf.layers.conv2d(vgg_layer4_out,
-                                  4*num_classes,
+                                  64,
                                   kernel_size=(1,1),
                                   strides=(1,1),
                                   padding='same',
@@ -105,7 +105,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     # 1x1 convolution from vgg_layer3_out. The output will be acted as a
     # skip layer and connect with layer4_upsample
     layer3_fcn = tf.layers.conv2d(vgg_layer3_out,
-                                  2*num_classes,
+                                  32,
                                   kernel_size=(1,1),
                                   strides=(1,1),
                                   padding='same',
