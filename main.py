@@ -173,7 +173,7 @@ def data_augmentation(images, gt_images):
             # LAB2RGB
             #result = cv2.cvtColor(image, cv2.COLOR_LAB2RGB)/255
             #result = result.astype('float32')
-            return cv2.cv2Color(image, cv2.COLOR_LAB2RGB)
+            return cv2.cvtColor(image, cv2.COLOR_LAB2RGB)
         return image
     def random_brightness(image, flag2):
         if flag2:
