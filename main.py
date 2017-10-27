@@ -250,7 +250,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
                 input_image: X,
                 correct_label: y,
                 keep_prob: 0.6,
-                learning_rate: 0.00002
+                learning_rate: 0.00001
             }
             _, loss = sess.run([train_op, cross_entropy_loss], feed_dict = feed_dict)
             if batch_num % 5 == 0:
@@ -258,7 +258,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
 tests.test_train_nn(train_nn)
 
 def run():
-    num_epochs = 60
+    num_epochs = 40
     batch_size = 10
     ## Note. batch size 10 is too big for g3.4xlarge, use g3.8xlarge instead
     num_classes = 2
