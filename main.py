@@ -96,7 +96,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
                                                  kernel_size=(4,4),
                                                  strides=(2,2),
                                                  padding='same',
-                                                 kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),,
+                                                 kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),
                                                  kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
     # 1x1 convolution from vgg_layer3_out. The output will be acted as a
     # skip layer and connect with layer4_upsample
@@ -105,7 +105,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
                                   kernel_size=(1,1),
                                   strides=(1,1),
                                   padding='same',
-                                  kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),,
+                                  kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),
                                   kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
     layer3_skip = tf.add(layer3_fcn,layer4_upsample)
     # continue with upsmapling, whose output will have same shape with the
@@ -115,7 +115,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
                                               kernel_size=(16,16),
                                               strides=(8,8),
                                               padding='same',
-                                              kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),,
+                                              kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),
                                               kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
     return output_layer
 tests.test_layers(layers)
