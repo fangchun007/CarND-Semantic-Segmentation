@@ -2,6 +2,8 @@
 ### Introduction
 In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
 
+Please visit [here](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/writeup.md) for writeup.
+
 ### Setup
 ##### Frameworks and Packages
 Make sure you have the following is installed:
