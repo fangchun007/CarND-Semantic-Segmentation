@@ -86,7 +86,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
                                   kernel_size=(1,1),
                                   strides=(1,1),
                                   padding='same',
-                                  kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),,
+                                  kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),
                                   kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
     layer4_skip = tf.add(layer4_fcn, layer7_upsample)
     # continue with upsampling, whose output will have same shape with
