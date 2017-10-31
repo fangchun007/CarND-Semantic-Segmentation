@@ -62,6 +62,10 @@ and by
 
 In this case, the loss will drop very fast from around 1.2 to 0.3. But it then fluctuate at around 0.25, even though I decrease the learning rate to 1e-6. The testing result is naturally unacceptable.
 
+The following figure shows the loss changes when we use normalization.
+
+![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/with_normalization.png)
+
 Implementation: See the *data_augmentation* function of [main.py](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py)
 
 ### Hyperparameters
@@ -69,7 +73,7 @@ Implementation: See the *data_augmentation* function of [main.py](https://github
 The hyperparameters of this version are set as follows. 
 
 ```
-num_epochs = 50 # 40 should be OK
+num_epochs = 60    # 40 should be OK
 batch_size = 8
 learning_rate = 0.00008
 keep_prob = 0.5
@@ -85,4 +89,5 @@ We also point out that the 'filters' of several convolutional (transpose) layers
 
 ![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/data_augment_sample.png "data augmentation sample")
 
+![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/run_v15.png)
 
