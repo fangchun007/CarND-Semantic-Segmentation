@@ -23,7 +23,7 @@ def gen_batch_function(data_folder, image_shape):
 
 ### FCN-8 Architecture
 
-In this project, we develop the famous [FCN-8 architecture](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) and use them during the model. It includes two parts: encoder and decoder. The idea is as follows. 
+In this project, we develop the famous [FCN-8 architecture](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) and use them as our training model. It includes two parts: encoder and decoder. The idea is as follows. 
 
 First, use a VGG16 model as the encoder part of the FCN. To preserve certain spatial information, we replace the fully connected layers (last layer of VGG16) by $1x1$ convolutions. 
 
