@@ -233,7 +233,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
 tests.test_train_nn(train_nn)
 
 def run():
-    num_epochs = 50
+    num_epochs = 60
     batch_size = 8
     num_classes = 2
     image_shape = (160, 576)
