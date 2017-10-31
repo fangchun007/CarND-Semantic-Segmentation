@@ -83,7 +83,7 @@ We also point out that the 'filters' of several convolutional (transpose) layers
 
 ### Result
 
-[!alt_text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/data_augment_sample.png "data augmentation sample")
+![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/data_augment_sample.png "data augmentation sample")
 
 
 
