@@ -60,6 +60,8 @@ or
 
 In this case, the loss will drop very fast from around 1.2 to 0.3. But it then fluctuate at around 0.25, even though I decrease the learning rate to 1e-6.  
 
+Implementation: See the [*data_augmentation*]() function of [main.py](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py)
+
 ### Hyperparameters
 
 The hyperparameters in this version: 
