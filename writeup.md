@@ -35,7 +35,7 @@ It is known that some global information, such as road boundaries and frames, ar
 
 ![alt_text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/FCN8.jpg)
 
-Implementation: See the *layers* function of [main.py](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py)
+Implementation: See the [*layers*](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py) function of main.py
 
 ### Performance
 
@@ -66,7 +66,7 @@ The following figure shows the loss changes when we use normalization.
 
 ![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/with_normalization.png)
 
-Implementation: See the *data_augmentation* function of [main.py](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py)
+Implementation: See the [*data_augmentation*](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/main.py) function of main.py.
 
 ### Hyperparameters
 
