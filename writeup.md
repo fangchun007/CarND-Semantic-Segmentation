@@ -50,7 +50,7 @@ In the Kitty Road Dataset, there are only 290 images used in training. With the 
 
 In the experiments, we observed that the first three methods are good for obtain a better result. But for the blur method, it seems brings an adverse effect, which cause the *loss* fluctuating at around 0.04, even if we decrease the learning rate to 1e-6.
 
-I also tried to **normalization** on the image data by 
+I also tried the **normalization** on the image data by 
 
 ```
     image = image/255
