@@ -23,11 +23,18 @@ def gen_batch_function(data_folder, image_shape):
 
 ## FCN-8 Architecture
 
-In this project, we develop the famous [FCN-8 architecture](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) and use them during the model. The idea is as follows. 
+In this project, we develop the famous [FCN-8 architecture](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) and use them during the model. It includes two parts: encoder and decoder. The idea is as follows. 
 
-First, we use the VGG16 model as the encoder part of the FCN.
+First, use a VGG16 model as the encoder part of the FCN. To preserve certain spatial information, we replace the fully connected layers (last layer of VGG16) by $1x1$ convolutions. 
 
 ![alt text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/vgg16.png "VGG16")
+
+The decoder part is consist of three convolutional layers. They progressively upsample to the original image size. As we known, some global information, such as frames of road, are normally extracted during earily part of VGG16. They will be very useful during labelling pixels of an object. In order to do this, three skip connections are added between encoder and decoder. Please refer to the following figure.
+
+![alt_text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/FCN8.jpg)
+
+adding skip connections to the model. In order to do this we’ll combine the output of two layers. The first output is the output of the current layer. The second output is the output of a layer further back in the network, typically a pooling layer. In the following example we combine the result of the previous layer with the result of the 4th pooling layer through elementwise addition (tf.add).
+
 
 encoder for FCN-8 is the VGG16 model pretrained on ImageNet for classification. The fully-connected layers are replaced by 1-by-1 convolutions. It follows with the decoder part, whose structure will be explained in detail in below.
 
