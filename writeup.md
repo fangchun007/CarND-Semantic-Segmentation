@@ -81,6 +81,12 @@ Truncated normal initializer `tf.truncated_normal_initializer(stddev=0.01)`, ker
 
 We also point out that the 'filters' of several convolutional (transpose) layers of the decode part are adjusted and they are not always equal to `num_classes`, in order to get a lower loss in 50 epochs of training. Of course, this purpose can also be achived by increase the keep probability to 0.8.
 
+### Result
+
+[!alt_text](https://github.com/fangchun007/CarND-Semantic-Segmentation/blob/master/data_augment_sample.png)
+
+
+
 
 ### Appendix: data augmentation
 
