@@ -50,13 +50,13 @@ It is verified that the first three methods are good for data augmentation. But 
 
 I also tried to **normalization** on the image data by 
 
-"""
+```
     image = image/255
-"""
+```
 or 
-"""
+```
     image = (image-np.ones*128)/256
-"""
+```
 
 In this case, the loss will drop very fast from around 1.2 to 0.3. But it then fluctuate at around 0.25, even though I decrease the learning rate to 1e-6.  
 
@@ -66,12 +66,12 @@ Implementation: See the [*data_augmentation*]() function of [main.py](https://gi
 
 The hyperparameters in this version: 
 
-"""
+```
 num_epochs = 50 # 40 should be OK
 batch_size = 8
 learning_rate = 0.00008
 keep_prob = 0.5
-"""
+```
 
 ### Regularization
 
