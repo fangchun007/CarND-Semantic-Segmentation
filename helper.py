@@ -140,6 +140,7 @@ def gen_test_output(sess, logits, keep_prob, image_pl, data_folder, image_shape)
         image = scipy.misc.imresize(scipy.misc.imread(image_file), image_shape)
         #image_contrast = increase_contrast(image, 1)
         #observed an opposite effect when we first increase the contrast
+        image = (image_shape[0], image_shape[1], 3)
         image_n = (image-np.ones(image_shape)*128)/256
         im_softmax = sess.run(
             [tf.nn.softmax(logits)],
