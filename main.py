@@ -198,6 +198,7 @@ def data_augmentation(images, gt_images, shape):
         image = increase_contrast(image, flags[1])
         image = random_brightness(image, flags[2])
         #image = blur_image(image, flags[3])
+        shape = (shape[0], shape[1], 3)
         return (image - np.ones(shape)*128)/256
         #return (image)/255
     def gt_augment_pipeline(gt_image, flags, shape):
@@ -205,6 +206,7 @@ def data_augmentation(images, gt_images, shape):
         :flags: e.g [1,0,1]
         """
         gt_image = flip_image(gt_image, flags[0])
+        shape = (shape[0], shape[1], 3)
         return (gt_image - np.ones(shape)*128)/256
         #return (gt_image)/255
     augmented_images = [augment_pipeline(image, flags, shape) for image, flags in zip(images, random_gen)]
