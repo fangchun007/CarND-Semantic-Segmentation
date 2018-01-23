@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this project, we aim to label the pixels of a road in images using a Fully Convolutional Network (FCN). This classification technique will help other systems in an autonomous driving car to determine where the free space is. With necessary modifications, this technique can be used to classify more classes like road, vehicle, bicycle, and pedestrian.
+In this project, we split up an automotive video into individual camera frames, paint each pixel of each frame using a fully convolutional network (FCN). We calssify each pixel as being either road or not road. This classification will help other systems in an autonomous driving car to determine where the free space is. With necessary modifications, this technique can be extended so that it can be used to classify more classes like road, vehicle, bicycle, and pedestrian.
 
 ### Training and Testing Data
 
